@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="10%p"
+    android:horizontalGap="0px"
+    android:verticalGap="0px"
+    android:keyHeight="@dimen/key_height"
+    >
+
+    <!--<Row>
+        <Key android:codes="101,49,114,96,119"
+                android:keyIcon="@drawable/sym_keyboard_s9_01"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_01"
+                android:keyEdgeFlags="left"/>
+        <Key android:codes="121,50,117,45,116"
+                android:keyIcon="@drawable/sym_keyboard_s9_02"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_02"/>              
+        <Key android:codes="111,51,112,61,105"
+                android:keyIcon="@drawable/sym_keyboard_s9_03"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_03"/>              
+        <Key android:codes="-5,-5,-5,-5,-5"
+                android:keyIcon="@drawable/sym_keyboard_delete"
+                android:iconPreview="@drawable/sym_keyboard_preview_delete"
+                android:keyWidth="19%p" android:keyEdgeFlags="right"
+                android:isRepeatable="true"/>
+    </Row>
+    
+    <Row>
+        <Key android:codes="115,52,100,91,97"
+                android:keyIcon="@drawable/sym_keyboard_s9_04"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_04"/>
+        <Key android:codes="103,53,104,93,102"
+                android:keyIcon="@drawable/sym_keyboard_s9_05"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_05"/>
+        <Key android:codes="107,54,108,92,106"
+                android:keyIcon="@drawable/sym_keyboard_s9_06"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_06"/>
+        <Key android:codes="-999,-999,-999,-999,-999"
+                android:keyLabel=" "
+                android:keyWidth="19%p"
+                android:keyEdgeFlags="right"/>
+            
+    </Row>
+    
+    <Row>
+        <Key android:codes="122,55,120,59,113"
+                android:keyIcon="@drawable/sym_keyboard_s9_07"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_07"/>
+        <Key android:codes="118,56,98,39,99"
+                android:keyIcon="@drawable/sym_keyboard_s9_08"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_08"/>
+        <Key android:codes="109,57,109,47,110"
+                android:keyIcon="@drawable/sym_keyboard_s9_09"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_09"/>
+        <Key android:codes="-1,-1,-1,-1,-1"
+                android:keyIcon="@drawable/sym_keyboard_shift"
+                android:iconPreview="@drawable/sym_keyboard_preview_shift"
+                android:keyWidth="19%p"
+                android:keyEdgeFlags="right"/>
+    </Row>
+    
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:codes="44,58,34,59,39"
+                android:keyIcon="@drawable/sym_keyboard_s9_10"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_10"/>
+        <Key android:codes="32,48,32,32,32"
+                android:keyIcon="@drawable/sym_keyboard_s9_11"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_11"/>
+        <Key android:codes="46,64,63,35,33"
+                android:keyIcon="@drawable/sym_keyboard_s9_12"
+                android:iconPreview="@drawable/sym_keyboard_preview_s9_12"/>
+        <Key android:codes="10,10,10,10,10"
+                android:keyIcon="@drawable/sym_keyboard_return"
+                android:iconPreview="@drawable/sym_keyboard_preview_return" 
+                android:keyWidth="20%p" android:keyEdgeFlags="right"/>
+    </Row>
+    -->
+
+    <Row>
+        <Key android:codes="113,113,113,113,113" android:keyLabel="q" android:keyEdgeFlags="left"/>
+        <Key android:codes="119,119,119,119,119" android:keyLabel="w"/>
+        <Key android:codes="101,101,101,101,101" android:keyLabel="e"/>
+        <Key android:codes="114,114,114,114,114" android:keyLabel="r"/>
+        <Key android:codes="116,116,116,116,116" android:keyLabel="t"/>
+        <Key android:codes="121,121,121,121,121" android:keyLabel="y"/>
+        <Key android:codes="117,117,117,117,117" android:keyLabel="u"/>
+        <Key android:codes="105,105,105,105,105" android:keyLabel="i"/>
+        <Key android:codes="111,111,111,111,111" android:keyLabel="o"/>
+        <Key android:codes="112,112,112,112,112" android:keyLabel="p" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="97,97,97,97,97" android:keyLabel="a" android:horizontalGap="5%p"
+            android:keyEdgeFlags="left"/>
+        <Key android:codes="115,115,115,115,115" android:keyLabel="s"/>
+        <Key android:codes="100,100,100,100,100" android:keyLabel="d"/>
+        <Key android:codes="102,102,102,102,102" android:keyLabel="f"/>
+        <Key android:codes="103,103,103,103,103" android:keyLabel="g"/>
+        <Key android:codes="104,104,104,104,104" android:keyLabel="h"/>
+        <Key android:codes="106,106,106,106,106" android:keyLabel="j"/>
+        <Key android:codes="107,107,107,107,107" android:keyLabel="k"/>
+        <Key android:codes="108,108,108,108,108" android:keyLabel="l" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="-1,-1,-1,-1,-1" android:keyIcon="@drawable/sym_keyboard_shift"
+            android:keyWidth="15%p"  android:keyEdgeFlags="left"/>
+        <Key android:codes="122,122,122,122,122" android:keyLabel="z"/>
+        <Key android:codes="120,120,120,120,120" android:keyLabel="x"/>
+        <Key android:codes="99,99,99,99,99,99" android:keyLabel="c"/>
+        <Key android:codes="118,118,118,118,118" android:keyLabel="v"/>
+        <Key android:codes="98,98,98,98,98" android:keyLabel="b"/>
+        <Key android:codes="110,110,110,110,110" android:keyLabel="n"/>
+        <Key android:codes="109,109,109,109,109" android:keyLabel="m"/>
+        <Key android:codes="-5,-5,-5,-5,-5" android:keyIcon="@drawable/sym_keyboard_delete"
+            android:keyWidth="15%p" android:keyEdgeFlags="right"
+            android:isRepeatable="true"/>
+    </Row>
+
+    <Row android:rowEdgeFlags="bottom">
+        <!--<Key android:codes="-3" android:keyIcon="@drawable/sym_keyboard_done"
+                android:keyWidth="15%p" android:keyEdgeFlags="left"/> -->
+        <Key android:codes="-2,-2,-2,-2,-2" android:keyLabel="\?123" android:keyWidth="15%p" android:keyEdgeFlags="left"/>
+        <!--
+            android:codes: -101 is not a framework-defined key code but a key code that is
+            privately defined in com.example.android.softkeyboard.LatinKeyboardView.-->
+
+        <Key android:codes="-101,-101,-101,-101,-101" android:keyIcon="@drawable/sym_keyboard_language_switch"
+            android:keyWidth="15%p"/>
+
+        <Key android:codes="44,44,44,44,44" android:keyLabel="," android:keyWidth="15%p"/>
+        <Key android:codes="32,32,32,32,32" android:keyIcon="@drawable/sym_keyboard_space"
+            android:keyWidth="40%p" android:isRepeatable="true"/>
+        <Key android:codes="46,46,46,46,46" android:keyLabel="."
+            android:keyWidth="10%p"/>
+        <Key android:codes="10,10,10,10,10" android:keyIcon="@drawable/sym_keyboard_return"
+            android:popupKeyboard="@xml/smiley"
+            android:keyWidth="20%p" android:keyEdgeFlags="right"/>
+    </Row>
+    
+</Keyboard>
+    
+<!-- From: file:/E:/Bangla%20Keyboard/S9-firstRun-master/app/src/main/res/xml/s9.xml -->

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="10%p"
+    android:horizontalGap="0px"
+    android:verticalGap="0px"
+    android:keyHeight="@dimen/key_height"
+    >
+
+
+
+    <Row>
+        <Key android:codes="113,113,113,113,113" android:keyLabel=":-)"
+            android:keyOutputText=":-)" android:keyEdgeFlags="left"/>
+        <Key android:codes="119,119,119,119,119" android:keyLabel=":-P"
+            android:keyOutputText=":-P"/>
+        <Key android:codes="101,101,101,101,101" android:keyLabel=":-("
+            android:keyOutputText=":-("/>
+        <Key android:codes="114,114,114,114,114" android:keyLabel=":-D"
+            android:keyOutputText=":-D" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="97,97,97,97,97" android:keyLabel=":-*"
+            android:keyEdgeFlags="left"  android:keyOutputText=":-*"/>
+
+        <Key android:codes="106,106,106,106,106" android:keyLabel="B)"
+            android:keyOutputText="B)"/>
+        <Key android:codes="107,107,107,107,107" android:keyLabel=":v"
+            android:keyOutputText=":v"/>
+        <Key android:codes="108,108,108,108,108" android:keyLabel=":'("
+            android:keyOutputText=":'(" android:keyEdgeFlags="right"/>
+    </Row>
+
+</Keyboard>
+    
+<!-- From: file:/E:/Bangla%20Keyboard/S9-firstRun-master/app/src/main/res/xml/smiley.xml -->

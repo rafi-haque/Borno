@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.gilbertl.s9.S9KeyboardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/keyboard"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/key_background"
+        android:keyBackground="@color/ime_background"
+        android:keyTextColor="@color/key_color"
+        />
+<!-- From: file:/E:/Bangla%20Keyboard/S9-firstRun-master/app/src/main/res/layout/input.xml -->

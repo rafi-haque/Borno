@@ -1,0 +1,147 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Risky Project Location:
+-----------------------
+The tools *should* handle project locations in any directory. However,
+due to bugs, placing projects in directories containing spaces in the
+path, or characters like ", ' and &, have had issues. We're working to
+eliminate these bugs, but to save yourself headaches you may want to
+move your project to a location where this is not a problem.
+F:\Bangla Keyboard\S9
+         -           
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .gitignore
+* LICENSE
+* README.md
+* S9.apk
+* default.properties
+* resources\
+* resources\corpus\
+* resources\corpus\anc-lexicon.txt
+* resources\corpus\anc.xml
+* resources\corpus\bnc-lexicon
+* resources\corpus\genXml
+* resources\corpus\genXml.hi
+* resources\corpus\genXml.hs
+* resources\corpus\genXml.o
+* resources\corpus\temp
+* resources\dict_creation\
+* resources\dict_creation\.svn\
+* resources\dict_creation\.svn\all-wcprops
+* resources\dict_creation\.svn\entries
+* resources\dict_creation\.svn\prop-base\
+* resources\dict_creation\.svn\prop-base\makedict.jar.svn-base
+* resources\dict_creation\.svn\text-base\
+* resources\dict_creation\.svn\text-base\android_metadata_create.sql.svn-base
+* resources\dict_creation\.svn\text-base\dict_metadata_table_create.sql.svn-base
+* resources\dict_creation\.svn\text-base\dict_table_create.sql.svn-base
+* resources\dict_creation\.svn\text-base\makedict.jar.svn-base
+* resources\dict_creation\.svn\text-base\makedict_Linux.svn-base
+* resources\dict_creation\.svn\text-base\makedict_Windows.bat.svn-base
+* resources\dict_creation\anc.dict
+* resources\dict_creation\android_metadata_create.sql
+* resources\dict_creation\conversion\
+* resources\dict_creation\conversion\.svn\
+* resources\dict_creation\conversion\.svn\all-wcprops
+* resources\dict_creation\conversion\.svn\entries
+* resources\dict_creation\conversion\.svn\prop-base\
+* resources\dict_creation\conversion\.svn\prop-base\SQLiteDictionaryConverter.class.svn-base
+* resources\dict_creation\conversion\.svn\prop-base\sqlitejdbc-v056.jar.svn-base
+* resources\dict_creation\conversion\.svn\text-base\
+* resources\dict_creation\conversion\.svn\text-base\SQLiteDictionaryConverter.class.svn-base
+* resources\dict_creation\conversion\.svn\text-base\SQLiteDictionaryConverter.java.svn-base
+* resources\dict_creation\conversion\.svn\text-base\SQLiteDictionaryConverter_Linux.svn-base
+* resources\dict_creation\conversion\.svn\text-base\SQLiteDictionaryConverter_Windows.bat.svn-base
+* resources\dict_creation\conversion\.svn\text-base\sqlitejdbc-v056.jar.svn-base
+* resources\dict_creation\conversion\SQLiteDictionaryConverter.class
+* resources\dict_creation\conversion\SQLiteDictionaryConverter.java
+* resources\dict_creation\conversion\SQLiteDictionaryConverter_Linux
+* resources\dict_creation\conversion\SQLiteDictionaryConverter_Windows.bat
+* resources\dict_creation\conversion\sqlitejdbc-v056.jar
+* resources\dict_creation\dict_metadata_table_create.sql
+* resources\dict_creation\dict_table_create.sql
+* resources\dict_creation\en.dict
+* resources\dict_creation\en\
+* resources\dict_creation\en\en.xml
+* resources\dict_creation\makedict.jar
+* resources\dict_creation\makedict_Linux
+* resources\dict_creation\makedict_Windows.bat
+* resources\dict_creation\xml\
+* resources\dict_creation\xml\.svn\
+* resources\dict_creation\xml\.svn\all-wcprops
+* resources\dict_creation\xml\.svn\entries
+* resources\dict_creation\xml\.svn\text-base\
+* resources\dict_creation\xml\.svn\text-base\bg.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\de.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\en.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\es.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\fi.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\fiLarge.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\fr.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\he.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\nl.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\pt.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\ru.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\sl.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\sv.xml.svn-base
+* resources\dict_creation\xml\.svn\text-base\uk.xml.svn-base
+* resources\dict_creation\xml\bg.xml
+* resources\dict_creation\xml\de.xml
+* resources\dict_creation\xml\en.xml
+* resources\dict_creation\xml\es.xml
+* resources\dict_creation\xml\fi.xml
+* resources\dict_creation\xml\fiLarge.xml
+* resources\dict_creation\xml\fr.xml
+* resources\dict_creation\xml\he.xml
+* resources\dict_creation\xml\nl.xml
+* resources\dict_creation\xml\pt.xml
+* resources\dict_creation\xml\ru.xml
+* resources\dict_creation\xml\sl.xml
+* resources\dict_creation\xml\sv.xml
+* resources\dict_creation\xml\uk.xml
+* resources\features
+* resources\graphics\
+* resources\graphics\key1.svg
+* resources\graphics\key10.svg
+* resources\graphics\key11.svg
+* resources\graphics\key12.svg
+* resources\graphics\key2.svg
+* resources\graphics\key3.svg
+* resources\graphics\key4.svg
+* resources\graphics\key5.svg
+* resources\graphics\key6.svg
+* resources\graphics\key7.svg
+* resources\graphics\key8.svg
+* resources\graphics\key9.svg
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* jni\ => app\src\main\jni\
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
