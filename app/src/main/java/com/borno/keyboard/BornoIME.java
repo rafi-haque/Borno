@@ -60,8 +60,9 @@ public class BornoIME extends InputMethodService
     private int motion = 0;
     private int prevMotion = 0;
 
-    private BornoKeyboard mQwertytKeyboard;
+    private BornoKeyboard mQwertyKeyboard;
     private BornoKeyboard mShiftedKeyboard;
+    private BornoKeyboard mSymbolsKeyboard;
     
     private BornoKeyboard mCurKeyboard;
     
@@ -90,7 +91,7 @@ public class BornoIME extends InputMethodService
      * is called after creation and any configuration change.
      */
     @Override public void onInitializeInterface() {
-        if (mQwertytKeyboard != null) {
+        if (mQwertyKeyboard != null) {
             // Configuration changes can happen after the keyboard gets recreated,
             // so we need to be able to re-build the keyboards if the available
             // space has changed.
@@ -98,8 +99,9 @@ public class BornoIME extends InputMethodService
             if (displayWidth == mLastDisplayWidth) return;
             mLastDisplayWidth = displayWidth;
         }
-        mQwertytKeyboard = new BornoKeyboard(this, R.xml.borno);
+        mQwertyKeyboard = new BornoKeyboard(this, R.xml.borno);
         mShiftedKeyboard = new BornoKeyboard(this, R.xml.borno_shifted);
+        mSymbolsKeyboard = new BornoKeyboard(this, R.xml.borno_symbols);
         mShiftedKeyboard.setShifted(false);
     }
     
@@ -118,7 +120,7 @@ public class BornoIME extends InputMethodService
         //mInputView.setPreviewEnabled(false);
         mInputView.setOnKeyboardActionListener(this);
         mInputView.setOnTouchListener(this);
-        mInputView.setKeyboard(mQwertytKeyboard);
+        mInputView.setKeyboard(mQwertyKeyboard);
         return mInputView;
     }
 
@@ -139,15 +141,14 @@ public class BornoIME extends InputMethodService
      * bound to the client, and are now receiving all of the detailed information
      * about the target of our edits.
      */
-    @Override public void onStartInput(EditorInfo attribute, boolean restarting) {
+    @Override
+    public void onStartInput(EditorInfo attribute, boolean restarting) {
         super.onStartInput(attribute, restarting);
         
         // Reset our state.  We want to do this even if restarting, because
         // the underlying state of the text editor could have changed in any way.
         mComposing.setLength(0);
-//        mWord.reset();
-//        updateCandidates();
-        
+
         if (!restarting) {
             // Clear shift states.
             mMetaState = 0;
@@ -165,7 +166,7 @@ public class BornoIME extends InputMethodService
                 // normal alphabetic keyboard, and assume that we should
                 // be doing predictive text (showing candidates as the
                 // user types).
-                mCurKeyboard = mQwertytKeyboard;
+                mCurKeyboard = mQwertyKeyboard;
                 
                 // We now look for a few special variations of text that will
                 // modify our behavior.
@@ -179,10 +180,7 @@ public class BornoIME extends InputMethodService
                 if (variation == EditorInfo.TYPE_TEXT_VARIATION_EMAIL_ADDRESS 
                         || variation == EditorInfo.TYPE_TEXT_VARIATION_URI
                         || variation == EditorInfo.TYPE_TEXT_VARIATION_FILTER) {
-                    // Our predictions are not useful for e-mail addresses
-                    // or URIs.
-                    //mPredictionOn = false;
-                	// it's nice to be able to see what's being typed
+
                 }
                 
                 if ((attribute.inputType&EditorInfo.TYPE_TEXT_FLAG_AUTO_COMPLETE) != 0) {
@@ -198,7 +196,7 @@ public class BornoIME extends InputMethodService
             default:
                 // For all unknown input types, default to the alphabetic
                 // keyboard with no special features.
-                mCurKeyboard = mQwertytKeyboard;
+                mCurKeyboard = mQwertyKeyboard;
                 updateShiftKeyState(attribute);
         }
         
@@ -206,7 +204,7 @@ public class BornoIME extends InputMethodService
         
         // Update the label on the enter key, depending on what the application
         // says it will do.
-        mQwertytKeyboard.setImeOptions(getResources(), attribute.imeOptions);
+        mQwertyKeyboard.setImeOptions(getResources(), attribute.imeOptions);
         mShiftedKeyboard.setImeOptions(getResources(), attribute.imeOptions);
     }
         
@@ -231,7 +229,7 @@ public class BornoIME extends InputMethodService
 
         setCandidatesViewShown(false);
         
-        mCurKeyboard = mQwertytKeyboard;
+        mCurKeyboard = mQwertyKeyboard;
         if (mInputView != null) {
             mInputView.closing();
         }
@@ -365,8 +363,8 @@ public class BornoIME extends InputMethodService
 	    	mCurKeyboard = mShiftedKeyboard;
 	    	mInputView.setKeyboard(mShiftedKeyboard);
     	} else {
-    		mCurKeyboard = mQwertytKeyboard;
-    		mInputView.setKeyboard(mQwertytKeyboard);
+    		mCurKeyboard = mQwertyKeyboard;
+    		mInputView.setKeyboard(mQwertyKeyboard);
     	}
     }
     
@@ -458,13 +456,36 @@ public class BornoIME extends InputMethodService
 
 
 
+    private void handleSymbols() {
+        if (mInputView == null) {
+            return;
+        }
+
+        Keyboard currentKeyboard = mInputView.getKeyboard();
+        if (currentKeyboard == mSymbolsKeyboard) {
+
+            mCurKeyboard = mQwertyKeyboard;
+            mInputView.setKeyboard(mQwertyKeyboard);
+            mInputView.setSubtypeOnSpaceKey(mInputMethodManager.getCurrentInputMethodSubtype());
+
+        }
+        else{
+            mCurKeyboard = mSymbolsKeyboard;
+            mInputView.setKeyboard(mSymbolsKeyboard);
+            mInputView.setSubtypeOnSpaceKey(mInputMethodManager.getCurrentInputMethodSubtype());
+        }
+
+    }
+
+
+
     private void handleShift() {
         if (mInputView == null) {
             return;
         }
 
         Keyboard currentKeyboard = mInputView.getKeyboard();
-        if (mQwertytKeyboard == currentKeyboard) {
+        if (mQwertyKeyboard == currentKeyboard) {
             // Alphabet keyboard
             checkToggleCapsLock();
             mCurKeyboard = mShiftedKeyboard;
@@ -473,8 +494,8 @@ public class BornoIME extends InputMethodService
 
         }
         else{
-            mCurKeyboard = mQwertytKeyboard;
-            mInputView.setKeyboard(mQwertytKeyboard);
+            mCurKeyboard = mQwertyKeyboard;
+            mInputView.setKeyboard(mQwertyKeyboard);
             mInputView.setSubtypeOnSpaceKey(mInputMethodManager.getCurrentInputMethodSubtype());
         }
 
@@ -538,7 +559,6 @@ public class BornoIME extends InputMethodService
                 } else if(motion != 0){
                     getCurrentInputConnection().setComposingText(mComposing.toString(), 1);
                 }
-//                getCurrentInputConnection().commitText(toBangla.toBangla(mComposing.toString()), mComposing.length());
 
             }
             else if(subtype.getLocale().equals("en_US")) {
@@ -731,9 +751,8 @@ public class BornoIME extends InputMethodService
             }
             handleLanguageSwitch();
             return;
-        } else if (primaryCode == Keyboard.KEYCODE_MODE_CHANGE
-                && mInputView != null) {
-        	assert false;
+        } else if (primaryCode == Keyboard.KEYCODE_MODE_CHANGE) {
+            handleSymbols();
         } else if (primaryCode == BornoKeyboard.KEYCODE_NULL) {
         	// do nothing
         } else {

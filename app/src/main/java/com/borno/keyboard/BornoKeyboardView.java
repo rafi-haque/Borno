@@ -14,7 +14,6 @@ public class BornoKeyboardView extends KeyboardView {
 	static final String TAG = "S9KeyboardView";
     static final int KEYCODE_OPTIONS = -100;
     static final int KEYCODE_SPACE = 32;
-    static final int KEYCODE_SMILEY = -141;
     static final int KEYCODE_LANGUAGE_SWITCH = -101;
 
     private View.OnTouchListener onTouchListener;
