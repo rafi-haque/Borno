@@ -1,23 +1,40 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
-        package="com.gilbertl.s9">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.borno.keyboard" >
 
-
-    
     <application android:label="@string/ime_name" >
-        <service android:permission="android.permission.BIND_INPUT_METHOD" android:name="S9IME">
+        <service
+            android:name=".BornoIME"
+            android:permission="android.permission.BIND_INPUT_METHOD" >
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
             </intent-filter>
-            <meta-data android:name="android.view.im" android:resource="@xml/method" />
+
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
         </service>
-            
-	    <activity android:name="com.gilbertl.s9.S9IMESettings" android:label="@string/ime_settings">
-	        <intent-filter>
-	            <action android:name="android.intent.action.MAIN"/>
+
+        <activity
+            android:name="com.haque.settings.BornoSettings"
+            android:label="@string/ime_settings" >
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
-	        </intent-filter>
-	    </activity>   
+            </intent-filter> -->
+        </activity>
+
+        <activity
+            android:name="com.borno.tutorial.TutorialActivity"
+            android:label="@string/title_activity_tutorial" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
-    
 </manifest>

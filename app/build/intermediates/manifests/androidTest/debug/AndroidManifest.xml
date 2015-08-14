@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gilbertl.s9.test">
+    package="com.gilbertl.borno.test">
 
-    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21" />
+    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="21" />
 
     <application>
         <uses-library android:name="android.test.runner" />
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.gilbertl.s9"
+                     android:targetPackage="com.gilbertl.borno"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for com.gilbertl.s9"/>
+                     android:label="Tests for com.gilbertl.borno"/>
 </manifest>

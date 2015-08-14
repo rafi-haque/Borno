@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gilbertl.s9"
+    package="com.gilbertl.borno"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -10,7 +10,7 @@
 
     <application android:label="@string/ime_name" >
         <service
-            android:name="com.gilbertl.s9.S9IME"
+            android:name="com.borno.keyboard.BornoIME"
             android:permission="android.permission.BIND_INPUT_METHOD" >
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
@@ -22,8 +22,20 @@
         </service>
 
         <activity
-            android:name="com.gilbertl.s9.S9IMESettings"
+            android:name="com.haque.settings.BornoSettings"
             android:label="@string/ime_settings" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.borno.tutorial.TutorialActivity"
+            android:label="@string/title_activity_tutorial" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

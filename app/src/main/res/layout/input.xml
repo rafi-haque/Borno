@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.gilbertl.s9.S9KeyboardView
+<com.borno.keyboard.BornoKeyboardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/keyboard"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:shadowColor="@color/candidate_background"
         android:background="@color/key_background"
         android:keyBackground="@color/ime_background"
         android:keyTextColor="@color/key_color"
