@@ -507,7 +507,6 @@ public class BornoIME extends InputMethodService
                 else if(prevMotion != 0){
                     getCurrentInputConnection().commitText(mComposing, mComposing.length());
                 }
-//                getCurrentInputConnection().commitText(toBangla.toBangla(mComposing.toString()), mComposing.length());
 
             }
             else if(subtype.getLocale().equals("en_US")) {
