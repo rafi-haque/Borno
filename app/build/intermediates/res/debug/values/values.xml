@@ -77,7 +77,9 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <!-- From: file:/E:/Bangla%20Keyboard/S9-firstRun-master/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="select_ime_message">Press IME Selection Button and Select Borno Keyboard</string>
     <string name="select_language">Select languages</string>
+    <string name="select_language_message">Press Language Setting button and select your languages</string>
     <string name="settings_name">Borno Keyboard Settings</string>
     <string name="swipe_sensitivity_settings">Swipe Sensitivity</string>
     <string name="title_activity_launcher">LauncherActivity</string>
@@ -87,6 +89,5 @@
     <!-- From: file:/E:/Bangla%20Keyboard/S9-firstRun-master/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title_activity_tutorial">বর্ণ কিবোর্ড</string>
-    <string name="tutorial">Press the settings Button and select your languages </string>
     <string name="word_separators">\u0020.,;:!?\n()[]*&amp;@{}/&lt;>_+=|"</string>
 </resources>

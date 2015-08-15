@@ -28,7 +28,11 @@
     <string name="title_activity_launcher">LauncherActivity</string>
 
     <string name="action_settings">Settings</string>
-    <string name="tutorial">Press the settings Button and select your languages </string>
     <string name="title_activity_tutorial">বর্ণ কিবোর্ড</string>
+
+
+    <!-- For Tutorial -->
+    <string name="select_ime_message">Press IME Selection Button and Select Borno Keyboard</string>
+    <string name="select_language_message">Press Language Setting button and select your languages</string>
 
 </resources>

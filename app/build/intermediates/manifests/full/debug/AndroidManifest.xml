@@ -11,6 +11,7 @@
     <application android:label="@string/ime_name" >
         <service
             android:name="com.borno.keyboard.BornoIME"
+            android:icon="@drawable/ic_launcher"
             android:permission="android.permission.BIND_INPUT_METHOD" >
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
@@ -35,6 +36,7 @@
         </activity>
         <activity
             android:name="com.borno.tutorial.TutorialActivity"
+            android:icon="@drawable/ic_launcher"
             android:label="@string/title_activity_tutorial" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

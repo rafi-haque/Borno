@@ -34,7 +34,7 @@
     </Row>
 
     <Row>
-        <Key android:codes="-1,-1,-1,-1,-1" android:keyIcon="@drawable/sym_keyboard_shift"
+        <Key android:codes="-1,-1,-1,-1,-1" android:keyIcon="@drawable/sym_keyboard_shifted"
             android:keyWidth="15%p"
              android:keyEdgeFlags="left"/>
         <Key android:codes="90,90,90,90,90" android:keyLabel="Z"/>

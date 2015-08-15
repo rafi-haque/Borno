@@ -19,9 +19,9 @@ public class TutorialActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
 
-        Button settingsButton = (Button) findViewById(R.id.button2);
+        Button imeSelection = (Button) findViewById(R.id.button2);
 
-        settingsButton.setOnClickListener(new View.OnClickListener() {
+        imeSelection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent mIntent = new Intent(TutorialActivity.this, BornoSettings.class);
@@ -29,9 +29,9 @@ public class TutorialActivity extends Activity {
             }
         });
 
-        Button settingsButton1 = (Button) findViewById(R.id.button3);
+        Button languageSelection = (Button) findViewById(R.id.button3);
 
-        settingsButton1.setOnClickListener(new View.OnClickListener() {
+        languageSelection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Settings.ACTION_INPUT_METHOD_SETTINGS));
